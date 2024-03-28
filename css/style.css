@@ -99,6 +99,7 @@ h2 {
     right: 0;
     padding-top: 1em;
     background-color: rgb(24, 26, 31);
+    z-index: 99;
   }
   .hamburger-menu-display {
     display: none;
@@ -124,7 +125,8 @@ h2 span {
   margin-top: 45px;
 }
 .hero .left .buttons button,
-.work .headline button {
+.work .headline button,
+.projects .cards button {
   border: none;
   background-color: transparent;
 }
@@ -199,12 +201,18 @@ section {
   font-size: 14px;
   color: #fff;
 }
-.work .cards > div button {
+.work .cards > div button,
+.more-projects .cards button,
+.projects .cards button,
+.about-container .left button {
   background-color: #2c1250;
   border: none;
   border-radius: 4px;
 }
-.work .cards > div button a {
+.work .cards > div button a,
+.projects .cards button a,
+.more-projects .cards button a,
+.about-container .left button a {
   padding: 10px;
   display: inline-block;
   text-transform: uppercase;
@@ -272,6 +280,12 @@ section {
   .work .cards {
     grid-template-columns: 1fr;
   }
+  .work button a {
+    white-space: nowrap;
+  }
+  .work .line::after {
+    width: 50%;
+  }
   .footer > div {
     flex-direction: column;
     align-items: center;
@@ -292,5 +306,117 @@ section {
   }
   .contact h2 {
     text-align: center;
+  }
+}
+@media (max-width: 460px) {
+  .work .line::after {
+    width: 35%;
+  }
+  .work .cards > div {
+    flex-direction: column;
+  }
+}
+/* projects */
+.projects-container h2 {
+  font-size: 32px;
+}
+.projects .line::after {
+  left: 249px;
+  width: 60%;
+}
+.projects .cards h3 {
+  font-size: 30px;
+  margin: 0;
+}
+.more-projects .cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3em;
+}
+@media (max-width: 1008px) {
+  .more-projects .cards {
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    margin-inline: auto;
+  }
+  .more-projects h2,
+  .projects .line {
+    text-align: center;
+  }
+  .more-projects .cards img,
+  .projects .cards > div img {
+    width: 100%;
+  }
+  .projects .cards > div {
+    flex-direction: column;
+  }
+  .projects .line::after {
+    width: 0;
+    height: 0;
+  }
+}
+
+/* about page */
+
+.about-container .line::after {
+  left: 230px;
+  width: 60%;
+}
+.about-container .line {
+  margin: 0;
+}
+.about-container .left {
+  max-width: 600px;
+}
+.about-container .left button,
+.about-container .left button a {
+  background: transparent;
+}
+.about-container .left button a {
+  border: 2px solid #4e20b0;
+}
+.about-cards {
+  gap: 9em;
+  margin-top: 10em;
+}
+.about-cards .cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3em;
+}
+.about-cards .cards {
+  margin-top: 6em;
+}
+.about-cards .cards > div h3 {
+  color: white;
+  font-weight: 500;
+  border-top: 1px solid #abb2bf;
+  border-left: 1px solid #abb2bf;
+  border-right: 1px solid #abb2bf;
+  padding: 5px 10px;
+  margin: 0;
+}
+.about-cards .cards > div > div {
+  padding: 5px 10px;
+  border: 1px solid #abb2bf;
+}
+@media (max-width: 920px) {
+  .about-container > section {
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-cards .left {
+    display: none;
+  }
+}
+@media (max-width: 594px) {
+  .about-cards .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .about-cards .line::after {
+    width: 40%;
+    left: 200px;
   }
 }
