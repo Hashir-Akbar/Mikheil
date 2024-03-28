@@ -415,8 +415,8 @@ section {
   .about-cards .cards {
     grid-template-columns: repeat(2, 1fr);
   }
-  .about-cards .line::after {
-    width: 40%;
-    left: 200px;
+  .about-container .line::after {
+    width: 35%;
+    left: 230px;
   }
 }
