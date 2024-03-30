@@ -27,46 +27,6 @@ h2 {
   font-weight: 500;
 }
 
-.flex {
-  display: flex;
-}
-.jutify-center {
-  justify-content: center;
-}
-.justify-between {
-  justify-content: space-between;
-}
-
-.align-center {
-  align-items: center;
-}
-.flex-wrap {
-  flex-wrap: wrap;
-}
-.gap-1 {
-  gap: 0.5em;
-}
-.gap-2 {
-  gap: 1em;
-}
-.gap-3 {
-  gap: 1.5em;
-}
-.gap-4 {
-  gap: 2em;
-}
-.mx-auto {
-  margin-inline: auto;
-}
-.flex-col {
-  flex-direction: column;
-}
-.relative {
-  position: relative;
-}
-.absolute {
-  position: absolute;
-}
 .header {
   max-width: 1260px;
   padding: 1em 0.8em;
