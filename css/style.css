@@ -70,9 +70,22 @@ h2 {
 .header {
   max-width: 1260px;
   padding: 1em 0.8em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-inline: auto;
+  position: relative;
+}
+.header .logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
 }
 .header nav ul {
   list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2em;
 }
 .header nav ul li a {
   color: #abb2bf;
@@ -86,55 +99,79 @@ h2 {
 }
 .header nav ul li.lang a {
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
 }
-.hamburger {
+.hamburger-menu-container {
   display: none;
 }
+.hamburger-menu-container .mobile-navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+}
 @media (max-width: 600px) {
-  .hamburger {
+  .hamburger-menu-container {
     display: block;
   }
   .hamburger-menu {
+    position: absolute;
     left: 0;
     right: 0;
     padding-top: 1em;
     background-color: rgb(24, 26, 31);
     z-index: 99;
   }
-  .hamburger-menu-display {
+  .hamburger-menu-anzeige {
     display: none;
   }
 
-  .header nav ul.dekstop {
+  .header nav ul.desktop-navigationsleiste {
     display: none;
   }
 }
 
-.main {
+.hauptsächlich {
   max-width: 1120px;
   padding-inline: 1em;
+  margin-inline: auto;
 }
 h1 span,
 h2 span {
   color: #757fde;
 }
-.hero .left p {
+.hauptsächlich .held {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.held .links p {
   max-width: 420px;
 }
-.hero .left .buttons {
+.held .links .buttons {
   margin-top: 45px;
+  display: flex;
+  align-items: center;
+  gap: 2em;
 }
-.hero .left .buttons button,
-.work .headline button,
-.projects .cards button {
+.arbeiten .uberschrift {
+  display: flex;
+
+  align-items: center;
+}
+.held .links .buttons button,
+.arbeiten .uberschrift button,
+.projekte .karten button {
   border: none;
   background-color: transparent;
 }
-.hero .left .buttons button a {
+.held .links .buttons button a {
   color: #abb2bf;
   text-decoration: none;
 }
-.hero .left .buttons button:first-child a {
+.held .links .buttons button:first-child a {
   /* border: 1px solid red; */
   padding: 10px 20px;
   color: white;
@@ -153,10 +190,10 @@ h2 span {
 section {
   margin-block: 5em;
 }
-.line {
+.linie {
   position: relative;
 }
-.line::after {
+.linie::after {
   content: "";
   position: absolute;
   width: 75%;
@@ -167,20 +204,20 @@ section {
   top: 50%;
   transform: translateY(-50%);
 }
-.work .headline h2 {
+.arbeiten .uberschrift h2 {
   max-width: 700px;
   width: 100%;
 }
-.work .headline button a {
+.arbeiten .uberschrift button a {
   color: #fff;
   text-decoration: none;
 }
-.work .cards {
+.arbeiten .karten {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 3em;
 }
-.work .cards > div {
+.arbeiten .karten > div {
   border-radius: 28.878px;
   background: linear-gradient(
     265deg,
@@ -191,28 +228,43 @@ section {
     #10031b 109.6%
   );
   padding: 1.3em 3em 2em 3em;
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
 }
-.work .cards > div h3 {
+.arbeiten .karten > div h3 {
   font-size: 26px;
   margin: 0;
 }
-.work .cards > div p {
+.arbeiten .karten > div p {
   margin: 1em 0;
   font-size: 14px;
   color: #fff;
 }
-.work .cards > div button,
-.more-projects .cards button,
-.projects .cards button,
-.about-container .left button {
+.arbeiten .karten > div button,
+.mehr-projekte .karten button,
+.projekte .karten button,
+.uber-Container .links button {
   background-color: #2c1250;
   border: none;
   border-radius: 4px;
 }
-.work .cards > div button a,
-.projects .cards button a,
-.more-projects .cards button a,
-.about-container .left button a {
+.uber-Container .sec-01 {
+  display: flex;
+  justify-content: space-between;
+
+  gap: 2em;
+}
+.projekte .karten > div {
+  display: flex;
+  align-items: center;
+
+  gap: 2em;
+}
+.arbeiten .karten > div button a,
+.projekte .karten button a,
+.mehr-projekte .karten button a,
+.uber-Container .links button a {
   padding: 10px;
   display: inline-block;
   text-transform: uppercase;
@@ -220,139 +272,163 @@ section {
   background-color: #2c1250;
   color: white;
 }
-.contact > div {
+.kontakt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.kontakt > div {
   width: 48%;
 }
-.contact > div:last-child {
+.kontakt > div:last-child {
   max-width: 400px;
 }
-.contact > div:last-child > div {
+.kontakt > div:last-child > div {
   max-width: 350px;
   padding: 2em 1em;
   border: 1px solid #abb2bf;
 }
-.contact .line::after {
+.kontakt .linie::after {
   left: 210px;
 }
-.contact .social-icons {
+.kontakt .soziale-Ikonen {
   padding-left: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 }
-.footer {
+.kontakt .soziale-Ikonen > div {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+.kontakt .soziale-Ikonen > div.telefon {
+  gap: 1em;
+}
+.fusszeile {
   background-color: #141b2d;
   padding-block: 3em;
   color: white;
 }
-.footer > div {
+.fusszeile > div {
   margin-inline: auto;
   max-width: 900px;
+  display: flex;
+  gap: 1em;
+  justify-content: space-between;
   padding-inline: 1em;
 }
-.footer > p {
+.fusszeile > div > div:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.fusszeile > p {
   text-align: center;
   margin: 0;
   padding-top: 3em;
 }
-.footer > div .mail,
-.footer > p {
+.fusszeile > div .mail,
+.fusszeile > p {
   color: #abb2bf;
 }
-.footer > div .mail {
+.fusszeile > div .mail {
   text-decoration: underline;
 }
 @media (max-width: 600px) {
   body {
     font-size: 15px;
   }
-  .hero {
+  .hauptsächlich .held {
     flex-wrap: wrap-reverse;
     align-items: center;
     justify-content: center;
   }
-  .hero .left {
+  .held .links {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
-  .hero .right img {
+  .held .rechts img {
     max-width: 220px;
   }
-  .work .cards {
+  .arbeiten .karten {
     grid-template-columns: 1fr;
   }
-  .work button a {
+  .arbeiten button a {
     white-space: nowrap;
   }
-  .work .line::after {
+  .arbeiten .linie::after {
     width: 50%;
   }
-  .footer > div {
+  .fusszeile > div {
     flex-direction: column;
     align-items: center;
   }
-  .contact {
+  .kontakt {
     flex-direction: column;
   }
-  .contact > div {
+  .kontakt > div {
     width: 100%;
   }
-  .contact p {
+  .kontakt p {
     text-align: center;
     margin-bottom: 1.4em;
   }
-  .contact .line::after {
+  .kontakt .linie::after {
     height: 0;
     width: 0;
   }
-  .contact h2 {
+  .kontakt h2 {
     text-align: center;
   }
 }
 @media (max-width: 460px) {
-  .work .line::after {
+  .arbeiten .linie::after {
     width: 35%;
   }
-  .work .cards > div {
+  .arbeiten .karten > div {
     flex-direction: column;
   }
 }
 /* projects */
-.projects-container h2 {
+.projekte-container h2 {
   font-size: 32px;
 }
-.projects .line::after {
+.projekte .linie::after {
   left: 249px;
   width: 60%;
 }
-.projects .cards h3 {
+.projekte .karten h3 {
   font-size: 30px;
   margin: 0;
 }
-.more-projects .cards {
+.mehr-projekte .karten {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 3em;
 }
 @media (max-width: 1008px) {
-  .more-projects .cards {
+  .mehr-projekte .karten {
     grid-template-columns: 1fr;
     justify-content: center;
     align-items: center;
     max-width: 600px;
     margin-inline: auto;
   }
-  .more-projects h2,
-  .projects .line {
+  .mehr-projekte h2,
+  .projekte .linie {
     text-align: center;
   }
-  .more-projects .cards img,
-  .projects .cards > div img {
+  .mehr-projekte .karten img,
+  .projekte .karten > div img {
     width: 100%;
   }
-  .projects .cards > div {
+  .projekte .karten > div {
     flex-direction: column;
   }
-  .projects .line::after {
+  .projekte .linie::after {
     width: 0;
     height: 0;
   }
@@ -360,36 +436,38 @@ section {
 
 /* about page */
 
-.about-container .line::after {
+.uber-Container .linie::after {
   left: 230px;
   width: 60%;
 }
-.about-container .line {
+.uber-Container .linie {
   margin: 0;
 }
-.about-container .left {
+.uber-Container .links {
   max-width: 600px;
 }
-.about-container .left button,
-.about-container .left button a {
+.uber-Container .links button,
+.uber-Container .links button a {
   background: transparent;
 }
-.about-container .left button a {
+.uber-Container .links button a {
   border: 2px solid #4e20b0;
 }
-.about-cards {
+.uber-karten {
   gap: 9em;
   margin-top: 10em;
+  display: flex;
+  align-items: center;
 }
-.about-cards .cards {
+.uber-karten .karten {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 3em;
 }
-.about-cards .cards {
+.uber-karten .karten {
   margin-top: 6em;
 }
-.about-cards .cards > div h3 {
+.uber-karten .karten > div h3 {
   color: white;
   font-weight: 500;
   border-top: 1px solid #abb2bf;
@@ -398,24 +476,24 @@ section {
   padding: 5px 10px;
   margin: 0;
 }
-.about-cards .cards > div > div {
+.uber-karten .karten > div > div {
   padding: 5px 10px;
   border: 1px solid #abb2bf;
 }
 @media (max-width: 920px) {
-  .about-container > section {
+  .uber-Container > section {
     flex-direction: column;
     align-items: center;
   }
-  .about-cards .left {
+  .uber-karten .links {
     display: none;
   }
 }
 @media (max-width: 594px) {
-  .about-cards .cards {
+  .uber-karten .karten {
     grid-template-columns: repeat(2, 1fr);
   }
-  .about-container .line::after {
+  .uber-Container .linie::after {
     width: 35%;
     left: 230px;
   }

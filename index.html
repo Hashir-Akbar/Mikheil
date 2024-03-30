@@ -11,35 +11,35 @@
 
 <body>
 
-    <header class="flex justify-between align-center header mx-auto relative">
-        <div class="logo flex align-center gap-1">
+    <header class="header">
+        <div class="logo">
             <img src="media/Logo.svg" alt="">
             <h3>Misha</h3>
         </div>
         <nav>
-            <ul class="flex align-center gap-4 dekstop">
+            <ul class="desktop-navigationsleiste">
                 <li class="active"><a href="./index.html">Home</a></li>
                 <li><a href="./about.html">About</a></li>
                 <li><a href="./projects.html">Projects</a></li>
                 <li><a href="#">Contact</a></li>
                 <li class="lang">
-                    <a href="#" class="flex align-center gap-1"><span>EN</span>
-                        <img src="media/Group-58.png" alt=""></a>
-                    <div class="lang-dropdown"></div>
+                    <a href="#"><span>EN</span>
+                        <img src="media/arrow-down.png" alt=""></a>
+                    <div class="sprach-dropdown"></div>
                 </li>
             </ul>
-            <div class="hamburger ">
+            <div class="hamburger-menu-container">
                 <img src="media/hamburger.png" alt="">
-                <div class="hamburger-menu hamburger-menu-display absolute">
-                    <ul class="flex flex-col align-center gap-4">
+                <div class="hamburger-menu hamburger-menu-anzeige">
+                    <ul class="mobile-navbar">
                         <li class="active"><a href="./index.html">Home</a></li>
                         <li><a href="./about.html">About</a></li>
                         <li><a href="./projects.html">Projects</a></li>
                         <li><a href="#">Contact</a></li>
                         <li class="lang">
-                            <a href="#" class="flex align-center gap-1"><span>EN</span>
-                                <img src="media/Group-58.png" alt=""></a>
-                            <div class="lang-dropdown"></div>
+                            <a href="#"><span>EN</span>
+                                <img src="media/arrow-down.png" alt=""></a>
+                            <div class="sprach-dropdown"></div>
                         </li>
                     </ul>
                 </div>
@@ -47,40 +47,40 @@
         </nav>
     </header>
 
-    <main class="main mx-auto">
-        <section class="hero flex align-center justify-between">
-            <div class="left">
+    <main class="hauptsächlich">
+        <section class="held">
+            <div class="links">
                 <h1>
                     I’m <span>Mikheil</span>, IT support and <br><span> System Administrator</span>
                 </h1>
                 <p>I’m passionate about server management. Currently diving into JavaScript/Node.js to expand my skill
                     set.</p>
-                <div class="buttons flex align-center gap-4 ">
+                <div class="buttons">
                     <button><a href="" class="border-gradient border-gradient-purple">Contact Me</a></button>
                     <button><a href=""><span>View Projects</span>
-                            <img src="./media/Group-58.png" alt=""></a></button>
+                            <img src="./media/arrow-down.png" alt=""></a></button>
                 </div>
             </div>
-            <div class="right">
+            <div class="rechts">
                 <img src="./media/redicon.jpg" alt="">
             </div>
         </section>
 
-        <section class="work">
-            <div class="headline flex align-center">
-                <h2 class="line"><span>#</span>work</h2>
+        <section class="arbeiten">
+            <div class="uberschrift ">
+                <h2 class="linie"><span>#</span>work</h2>
                 <button><a href="">View All ~~></a></button>
             </div>
-            <div class="cards">
-                <div class="flex align-center gap-3 card-01">
-                    <img src="media/Group-5351.png" alt="">
+            <div class="karten">
+                <div>
+                    <img src="media/laptop.png" alt="">
                     <div>
                         <h3>Self-employed 3D designer</h3>
                         <p>I work with Blender Cinema 4D and Adobe Animate</p>
                         <button><a href="">Learn More</a></button>
                     </div>
                 </div>
-                <div class="flex align-center gap-3 card-01">
+                <div>
                     <img src="media/Bulb.png" alt="">
                     <div>
                         <h3>Rath-it.solutions</h3>
@@ -88,15 +88,15 @@
                         <button><a href="">Learn More</a></button>
                     </div>
                 </div>
-                <div class="flex align-center gap-3 card-01">
-                    <img src="media/Group-5354.png" alt="">
+                <div>
+                    <img src="media/analytics.png" alt="">
                     <div>
                         <h3>Notarbene Software GmbH</h3>
                         <p>June 2022 - January 2023</p>
                         <button><a href="">Learn More</a></button>
                     </div>
                 </div>
-                <div class="flex align-center gap-3 card-01">
+                <div>
                     <img src="media/Star.png" alt="">
                     <div>
                         <h3>Frequentis AG</h3>
@@ -107,25 +107,25 @@
             </div>
         </section>
 
-        <section class="flex contact justify-between align-center">
+        <section class="kontakt">
             <div>
-                <h2 class="line"><span>#</span>Contact</h2>
+                <h2 class="linie"><span>#</span>Contact</h2>
                 <p>I'm open to exploring work opportunities in general. If you have any other requests or questions,
                     feel free to reach out to me</p>
             </div>
             <div>
                 <div>
                     <h3>Contact Me</h3>
-                    <div class="social-icons flex flex-col gap-2">
-                        <div class="email flex align-center gap-1">
+                    <div class="soziale-Ikonen">
+                        <div class="email">
                             <img src="./media/Email.png" alt="">
                             <span>elias@elias.me</span>
                         </div>
-                        <div class="phone flex align-center gap-2">
-                            <img src="./media/Group.png" alt="">
+                        <div class="telefon">
+                            <img src="./media/call-icon.png" alt="">
                             <span>+43 660 712 6959</span>
                         </div>
-                        <div class="discord flex align-center gap-1">
+                        <div class="discord">
                             <img src="./media/Discord.png" alt="">
                             <span>!Misha#519</span>
                         </div>
@@ -136,9 +136,9 @@
     </main>
 
 
-    <footer class="footer">
-        <div class="flex gap-2 justify-between">
-            <div class="flex flex-col gap-1">
+    <footer class="fusszeile">
+        <div>
+            <div>
                 <div>
                     <span>Misha</span>
                     <span class="mail">tamasidzemikheil@gmail.com</span>

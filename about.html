@@ -11,35 +11,35 @@
 
 <body>
 
-    <header class="flex justify-between align-center header mx-auto relative">
-        <div class="logo flex align-center gap-1">
+    <header class="header">
+        <div class="logo">
             <img src="media/Logo.svg" alt="">
             <h3>Misha</h3>
         </div>
         <nav>
-            <ul class="flex align-center gap-4 dekstop">
+            <ul class="desktop-navigationsleiste">
                 <li><a href="./index.html">Home</a></li>
                 <li class="active"><a href="./about.html">About</a></li>
                 <li><a href="./projects.html">Projects</a></li>
                 <li><a href="#">Contact</a></li>
                 <li class="lang">
-                    <a href="#" class="flex align-center gap-1"><span>EN</span>
-                        <img src="media/Group-58.png" alt=""></a>
-                    <div class="lang-dropdown"></div>
+                    <a href="#"><span>EN</span>
+                        <img src="media/arrow-down.png" alt=""></a>
+                    <div class="sprach-dropdown"></div>
                 </li>
             </ul>
-            <div class="hamburger ">
+            <div class="hamburger-menu-container">
                 <img src="media/hamburger.png" alt="">
-                <div class="hamburger-menu hamburger-menu-display absolute">
-                    <ul class="flex flex-col align-center gap-4">
+                <div class="hamburger-menu hamburger-menu-anzeige">
+                    <ul class="mobile-navbar">
                         <li><a href="./index.html">Home</a></li>
                         <li class="active"><a href="./about.html">About</a></li>
                         <li><a href="./projects.html">Projects</a></li>
                         <li><a href="#">Contact</a></li>
                         <li class="lang">
-                            <a href="#" class="flex align-center gap-1"><span>EN</span>
-                                <img src="media/Group-58.png" alt=""></a>
-                            <div class="lang-dropdown"></div>
+                            <a href="#"><span>EN</span>
+                                <img src="media/arrow-down.png" alt=""></a>
+                            <div class="sprach-dropdown"></div>
                         </li>
                     </ul>
                 </div>
@@ -47,11 +47,11 @@
         </nav>
     </header>
 
-    <main class="main mx-auto about-container">
+    <main class="hauptsächlich  uber-Container">
 
-        <section class="flex gap-4 justify-between ">
-            <div class="left">
-                <h2 class="line">about-me</h2>
+        <section class="sec-01">
+            <div class="links">
+                <h2 class="linie">about-me</h2>
                 <p>Hello, I'm Mikheil,</p>
                 <p>a trained IT technician hailing from Georgia, now calling Austria my home for the past six years. My
                     dedication lies in tackling the problems people face, offering my unwavering support and help as far
@@ -61,18 +61,20 @@
                     comprehensive assistance for any tech-related issues, be it hardware or software. </p>
                 <button><a href="">Read more -></a></button>
             </div>
-            <div class="right">
-                <img src="./media/photo.png" alt="">
+            <div class="rechts">
+                <img src="./media/person-picture.png" alt="">
             </div>
 
         </section>
-        <section class="about-cards flex gap-4  align-center">
-            <div class="left">
-                <img src="./media/image-35.png" alt="">
+
+
+        <section class="uber-karten ">
+            <div class="links">
+                <img src="./media/black-watery-logo.png" alt="">
             </div>
-            <div class="right">
-                <h2 class="line"><span>#</span>skills</h2>
-                <div class="cards">
+            <div class="rechts">
+                <h2 class="linie"><span>#</span>skills</h2>
+                <div class="karten">
                     <div>
                         <h3>Languages</h3>
                         <div>
@@ -116,9 +118,9 @@
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="flex gap-2 justify-between">
-            <div class="flex flex-col gap-1">
+    <footer class="fusszeile">
+        <div>
+            <div>
                 <div>
                     <span>Misha</span>
                     <span class="mail">tamasidzemikheil@gmail.com</span>
@@ -136,7 +138,6 @@
         </div>
         <p>© Copyright 2024. Made by Misha</p>
     </footer>
-
     <script src="./js/scripts.js"></script>
 </body>
 
