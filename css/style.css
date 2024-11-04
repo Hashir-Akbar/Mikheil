@@ -440,6 +440,26 @@ section {
   padding: 5px 10px;
   border: 1px solid #abb2bf;
 }
+.footer-icons {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+.footer-icons img{
+  width: 30px;
+  height: 30px;
+}
+.footer-icons img:first-child{
+  width: 32px;
+  height: 32px;
+}
+.footer-icons img:last-child{
+  height: 24px;
+  object-fit: contain;
+}
+#loom-companion-mv3{
+  display: none;
+}
 @media (max-width: 920px) {
   .uber-Container > section {
     flex-direction: column;
